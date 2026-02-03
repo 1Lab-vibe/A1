@@ -18,19 +18,27 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="fixed top-0 left-0 w-full z-50 glass border-b border-white/5 py-4">
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tighter flex items-center gap-2">
-            <span className="w-8 h-8 rounded-lg accent-gradient flex items-center justify-center text-white">1L</span>
-            A1 <span className="text-xs font-normal opacity-50 ml-1">by 1lab</span>
+      <header className="fixed top-0 left-0 w-full z-50 glass border-b border-white/5 py-3 md:py-4">
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+          <div className="text-lg md:text-xl font-bold tracking-tighter flex items-center gap-2">
+            <span className="w-7 h-7 md:w-8 md:h-8 rounded-lg accent-gradient flex items-center justify-center text-white text-sm md:text-base">1L</span>
+            A1 <span className="text-[10px] font-normal opacity-50 ml-0.5 md:ml-1">by 1lab</span>
           </div>
           <a 
             href={botUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:block bg-white text-black hover:bg-gray-200 px-6 py-2 rounded-full text-sm font-semibold transition-all"
+            className="hidden sm:block bg-white text-black hover:bg-gray-200 px-5 md:px-6 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold transition-all"
           >
             Собрать свой A1
+          </a>
+          <a 
+            href={botUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sm:hidden text-white font-bold text-xs border border-white/20 px-3 py-1 rounded-full"
+          >
+            Start
           </a>
         </div>
       </header>
@@ -50,12 +58,12 @@ const App: React.FC = () => {
         <SEODetails />
       </main>
 
-      <footer className="bg-black py-12 border-t border-white/5">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="text-sm text-gray-500">
+      <footer className="bg-black py-10 md:py-12 border-t border-white/5">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 text-center md:text-left">
+          <div className="text-xs md:text-sm text-gray-500">
             © {new Date().getFullYear()} 1lab Studio. Все права защищены.
           </div>
-          <div className="flex gap-8 text-sm text-gray-400">
+          <div className="flex gap-6 md:gap-8 text-xs md:text-sm text-gray-400">
             <a href="#" className="hover:text-white">Конфиденциальность</a>
             <a href="#" className="hover:text-white">Условия</a>
             <a href={botUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">@ai_1lab_bot</a>
@@ -68,10 +76,10 @@ const App: React.FC = () => {
         href={botUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#229ED9] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#229ED9] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95"
         aria-label="Написать в Telegram"
       >
-        <svg className="w-8 h-8 text-white fill-current" viewBox="0 0 24 24">
+        <svg className="w-7 h-7 md:w-8 md:h-8 text-white fill-current" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.35-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.35-.49.96-.75 3.78-1.65 6.31-2.74 7.58-3.27 3.61-1.51 4.35-1.77 4.84-1.78.11 0 .35.03.5.16.12.1.16.23.18.33.02.11.02.23.01.34z"/>
         </svg>
       </a>

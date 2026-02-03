@@ -4,50 +4,50 @@ import React from 'react';
 const Hero: React.FC = () => {
   const botUrl = "https://t.me/ai_1lab_bot";
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section className="relative pt-24 pb-12 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background blobs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-emerald-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/4 -left-20 w-64 h-64 md:w-96 md:h-96 bg-blue-600/20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-1/4 -right-20 w-64 h-64 md:w-96 md:h-96 bg-emerald-600/20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 relative z-10 text-center">
-        <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wide uppercase glass rounded-full text-blue-400 border border-blue-500/20">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
+        <div className="inline-block px-3 py-1 mb-4 md:mb-6 text-[10px] md:text-sm font-medium tracking-wide uppercase glass rounded-full text-blue-400 border border-blue-500/20">
           AI Studio 1lab presents
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight max-w-4xl mx-auto text-gradient">
+        <h1 className="text-3xl sm:text-4xl md:text-7xl font-extrabold mb-6 md:mb-8 tracking-tight leading-tight max-w-4xl mx-auto text-gradient px-2">
           A1: Ваша идеальная AI-система. Соберите как конструктор.
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto italic font-light">
+        <p className="text-base md:text-2xl text-gray-400 mb-8 md:mb-10 max-w-2xl mx-auto italic font-light px-4">
           Возьмите готовый профиль с дополнениями или соберите уникальное решение под задачи вашего бизнеса через наш бот.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 max-w-3xl mx-auto mb-10 md:mb-12 px-4">
           {[
             "Гибкий конструктор модулей",
             "Готовые бизнес-профили",
             "Умные допы (Add-ons)"
           ].map((benefit, i) => (
             <div key={i} className="flex items-center justify-center gap-2 text-gray-300">
-              <svg className="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span className="text-sm font-medium">{benefit}</span>
+              <span className="text-xs md:text-sm font-medium">{benefit}</span>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-white text-black rounded-xl hover:scale-105 transition-transform shadow-2xl shadow-white/10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-6 md:px-0">
+          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3.5 md:px-10 md:py-4 text-base md:text-lg font-bold bg-white text-black rounded-xl hover:scale-105 transition-transform shadow-xl shadow-white/5">
             Настроить профиль A1
           </a>
-          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-4 text-lg font-bold glass text-white rounded-xl hover:bg-white/5 transition-colors border border-white/10">
-            Посмотреть готовые решения
+          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-3.5 md:px-10 md:py-4 text-base md:text-lg font-bold glass text-white rounded-xl hover:bg-white/5 transition-colors border border-white/10">
+            Посмотреть решения
           </a>
         </div>
 
-        <div className="mt-12 text-sm text-gray-500 font-medium">
-          Powered by 1lab • Заявки принимаются в @ai_1lab_bot
+        <div className="mt-10 md:mt-12 text-[10px] md:text-sm text-gray-500 font-medium">
+          Powered by 1lab • Заявки в @ai_1lab_bot
         </div>
       </div>
     </section>
