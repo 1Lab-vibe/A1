@@ -2,6 +2,7 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const botUrl = "https://t.me/ai_1lab_bot";
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background blobs */}
@@ -18,7 +19,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto italic font-light">
-          Возьмите готовый профиль с дополнениями или соберите уникальное решение под задачи вашего бизнеса.
+          Возьмите готовый профиль с дополнениями или соберите уникальное решение под задачи вашего бизнеса через наш бот.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
@@ -37,16 +38,16 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pilot" className="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-white text-black rounded-xl hover:scale-105 transition-transform shadow-2xl shadow-white/10">
+          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-white text-black rounded-xl hover:scale-105 transition-transform shadow-2xl shadow-white/10">
             Настроить профиль A1
           </a>
-          <a href="#solution" className="w-full sm:w-auto px-10 py-4 text-lg font-bold glass text-white rounded-xl hover:bg-white/5 transition-colors border border-white/10">
+          <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-10 py-4 text-lg font-bold glass text-white rounded-xl hover:bg-white/5 transition-colors border border-white/10">
             Посмотреть готовые решения
           </a>
         </div>
 
         <div className="mt-12 text-sm text-gray-500 font-medium">
-          Powered by 1lab • Гибкость. Мощность. Результат.
+          Powered by 1lab • Заявки принимаются в @ai_1lab_bot
         </div>
       </div>
     </section>

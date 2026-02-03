@@ -2,6 +2,7 @@
 import React from 'react';
 
 const SocialProof: React.FC = () => {
+  const botUrl = "https://t.me/ai_1lab_bot";
   return (
     <section className="py-24 bg-[#0a0f1d]">
       <div className="container mx-auto px-6">
@@ -46,7 +47,7 @@ const SocialProof: React.FC = () => {
           <div className="flex flex-col lg:flex-row gap-12 relative z-10">
             <div className="lg:w-3/5">
               <h2 className="text-4xl font-black mb-4">🚀 ПИЛОТ: AI COO OS — 14 ДНЕЙ</h2>
-              <p className="text-xl text-gray-300 mb-8 italic">Запустите AI без хаоса за 2 недели.</p>
+              <p className="text-xl text-gray-300 mb-8 italic">Запустите AI без хаоса за 2 недели через @ai_1lab_bot.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -74,7 +75,7 @@ const SocialProof: React.FC = () => {
                    <span className="text-emerald-500">⏱</span> <strong>Сроки:</strong> старт за 2–3 дня
                 </div>
                 <div className="flex items-center gap-2">
-                   <span className="text-emerald-500">🔒</span> <strong>Гарантии:</strong> 100% human-in-the-loop
+                   <span className="text-emerald-500">🔒</span> <strong>Гарантии:</strong> 152-ФЗ & Security
                 </div>
               </div>
             </div>
@@ -82,8 +83,8 @@ const SocialProof: React.FC = () => {
             <div className="lg:w-2/5 flex flex-col justify-center items-center bg-white/5 rounded-3xl p-8 border border-white/10">
               <div className="text-sm uppercase tracking-widest text-gray-400 mb-2">Стоимость пилота</div>
               <div className="text-5xl font-black text-white mb-2">€1 000 – 2 000</div>
-              <div className="text-xs text-gray-500 mb-8 text-center italic">Засчитывается в стоимость подписки при продолжении работы</div>
-              <a href="mailto:pilot@aicoo.os" className="w-full text-center py-4 bg-emerald-500 text-black font-black rounded-xl hover:scale-105 transition-transform shadow-xl shadow-emerald-500/20">
+              <div className="text-xs text-gray-500 mb-8 text-center italic">Заявки обрабатываются ботом @ai_1lab_bot</div>
+              <a href={botUrl} target="_blank" rel="noopener noreferrer" className="w-full text-center py-4 bg-emerald-500 text-black font-black rounded-xl hover:scale-105 transition-transform shadow-xl shadow-emerald-500/20">
                 Запустить пилот
               </a>
             </div>
