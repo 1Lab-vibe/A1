@@ -1,46 +1,18 @@
-
-version: '3.8'
-
 services:
-  traefik:
-    image: traefik:v2.10
-    container_name: traefik
-    command:
-      - "--api.insecure=false"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=admin@1lab.ai"
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - "./letsencrypt:/letsencrypt"
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    networks:
-      - proxy
-
-  a1-landing:
+ a1-landing:
     build: .
     container_name: a1_landing_app
     restart: always
     labels:
       - "traefik.enable=true"
       # Change 'a1.1lab.ai' to your actual domain
-      - "traefik.http.routers.a1.rule=Host(`a1.1lab.ai`)"
+      - "traefik.http.routers.a1.rule=Host(`1true.ru`,`www.1true.ru`)"
       - "traefik.http.routers.a1.entrypoints=websecure"
-      - "traefik.http.routers.a1.tls.certresolver=myresolver"
-      # HTTP to HTTPS redirection
-      - "traefik.http.routers.a1-http.rule=Host(`a1.1lab.ai`)"
-      - "traefik.http.routers.a1-http.entrypoints=web"
-      - "traefik.http.routers.a1-http.middlewares=redirect-to-https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.a1.tls.tls=true"
+      - "traefik.http.routers.a1.loadbalancer.server.port=80"
     networks:
-      - proxy
+      - traefik-public
 
 networks:
-  proxy:
-    external: false
+  traefik-public:
+    external: true
